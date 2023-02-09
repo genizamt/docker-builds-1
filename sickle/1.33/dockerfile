@@ -1,0 +1,48 @@
+# FROM defines the base docker image. This command has to come first in the file
+# The 'as' keyword lets you name the folowing stage. We use `app` for the production image
+FROM ubuntu:bionic as app
+
+# ARG sets environment variables during the build stage
+ARG SICKLE_VER="1.33"
+
+# LABEL instructions tag the image with metadata that might be important to the user
+# Optional, but highly recommended
+LABEL base.image="ubuntu:bionic"
+LABEL dockerfile.version="1"
+LABEL software="Sickle"
+LABEL software.version=$SICKLE_VER
+LABEL description="This software uses adaptive trimming to trim/remove reads based on quality and length"
+LABEL website="https://github.com/najoshi/sickle"
+LABEL license="https://github.com/najoshi/sickle/blob/master/LICENSE"
+LABEL maintainer="Matthew Geniza"
+LABEL maintainer.email="matthew.geniza@dhsoha.state.or.us"
+
+CMD ["bash"]
+
+# RUN executes code during the build
+# Install dependencies via apt-get or yum if using a centos or fedora base
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates gcc git libc6-dev make zlib1g-dev && rm -rf /var/lib/apt/lists/*
+
+
+# Install and/or setup more things.
+# Example: sickle 1.33
+RUN git clone https://github.com/najoshi/sickle.git && cd sickle && make && cd .. && cp sickle/sickle /usr/bin && rm -r sickle 
+RUN mkdir /data
+WORKDIR /data
+ENV PATH="/sickle-${SICKLE_VER}/bin:${PATH}"
+
+
+# ENTRYPOINT sets executable 
+ENTRYPOINT ["sickle"]
+
+# A second FROM instruction creates a new stage
+# We use `test` for the test image
+FROM app as test
+
+
+# Demonstrate that the program is successfully installed
+
+RUN sickle --help
+RUN pwd 
+
+
