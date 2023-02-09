@@ -144,6 +144,7 @@ To learn more about the docker pull rate limits and the open source software pro
 | [ShigEiFinder](https://hub.docker.com/r/staphb/shigeifinder/) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/shigeifinder)](https://hub.docker.com/r/staphb/shigeifinder) | <ul><li>1.3.2</li><li>1.3.3</li></ul> | https://github.com/LanLab/ShigEiFinder |
 | [Shovill](https://hub.docker.com/r/staphb/shovill/) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/shovill)](https://hub.docker.com/r/staphb/shovill) | <ul><li>1.0.4</li><li>1.1.0</li></ul> | https://github.com/tseemann/shovill |
 | [Shovill-se](https://hub.docker.com/r/staphb/shovill-se/) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/shovill-se)](https://hub.docker.com/r/staphb/shovill-se) | <ul><li>1.1.0</li></ul> | https://github.com/rpetit3/shovill/tree/v1.1.0se |
+| [sickle](https://hub.docker.com/r/staphb/sickle/) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/sickle)](https://hub.docker.com/r/staphb/sickle) | <ul><li>1.3.3</li><li> | https://github.com/najoshi/sickle |
 | [SISTR](https://hub.docker.com/r/staphb/sistr/) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/sistr)](https://hub.docker.com/r/staphb/sistr) | <ul><li>1.0.2</li><li>1.1.1</li></ul> | https://github.com/phac-nml/sistr_cmd |
 | [SKA](https://hub.docker.com/r/staphb/ska/) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/ska)](https://hub.docker.com/r/staphb/ska) | <ul><li>1.0</li></ul> | https://github.com/simonrharris/SKA |
 | [SKESA](https://hub.docker.com/r/staphb/skesa) <br/> [![docker pulls](https://badgen.net/docker/pulls/staphb/skesa)](https://hub.docker.com/r/staphb/skesa) | <ul><li>2.3.0</li><li>2.4.0 (`gfa_connector` & `kmercounter` included)</li></ul> | https://github.com/ncbi/SKESA |
@@ -218,3 +219,4 @@ Each Dockerfile lists the author(s)/maintainer(s) as a metadata `LABEL`, but the
   * [@jcw349](https://github.com/jcw349)
   * [@wchen190](https://github.com/wchen190)
   * [@shelby-bennett](https://github.com/shelby-bennett)
+  * [@genizamt](https://github.com/genizamt)
